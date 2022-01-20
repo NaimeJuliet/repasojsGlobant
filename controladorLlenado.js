@@ -34,12 +34,27 @@ produtos.forEach(function(produto){
     imagen.classList.add("p-3")
     imagen.src=produto.foto
 
+    let nombreProducto=document.createElement("h2")
+    nombreProducto.textContent=produto.nombre
+
+    let tamanoProducto=document.createElement("h3")
+    tamanoProducto.textContent=produto.tamano
+
+    let precioProducto=document.createElement("h4")
+    precioProducto.textContent=produto.precio
+
+
     //PADRES E HIJOS
     tarjeta.appendChild(imagen)
+    tarjeta.appendChild(nombreProducto)
+    tarjeta.appendChild(tamanoProducto)
+    tarjeta.appendChild(precioProducto)
 
     columna.appendChild(tarjeta)
 
     fila.appendChild(columna)
+
+
 
 
 
